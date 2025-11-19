@@ -27,16 +27,16 @@ public class iOSBasicsTest extends iOSBaseTest {
 		alertsPage.verifyToastMessage();
 	}
 
-//	@Test(priority = 2)
-//	public void iOSSliderTest() {
-//		// slider validation
-//		iOSSliderPage slider = new iOSSliderPage(driver);
-//		slider.iOSSliderValidation();
-//		slider.iOSDefaultSliderValidation();
-//		slider.iOSTintedSliderValidation();
-//		slider.iOSCustomSliderValidation();
-//		slider.iOSMinMaxSliderValidation();
-//	}
+	@Test(priority = 2)
+	public void iOSSliderTest() {
+		// slider validation
+		iOSSliderPage slider = new iOSSliderPage(driver);
+		slider.iOSSliderValidation();
+		slider.iOSDefaultSliderValidation();
+		slider.iOSTintedSliderValidation();
+		slider.iOSCustomSliderValidation();
+		slider.iOSMinMaxSliderValidation();
+	}
 
 	@Test(priority = 3)
 	public void iOSDropdownPickerTest() {
@@ -46,23 +46,23 @@ public class iOSBasicsTest extends iOSBaseTest {
 		dropdown.DropdownValidation();
 	}
 
-//	@Test
-//	public void IOSSwipeTest() throws InterruptedException {
-//		Map<String, String> params = new HashMap<String, String>();
-//		params.put("bundleId", "com.apple.mobileslideshow");
-//		params.put("direction", "right");
-//		Thread.sleep(2000);
-//		driver.executeScript("mobile:swipe", params);
-//		driver.executeScript("mobile:launchApp", params);
-//		// driver.findElement(AppiumBy.iOSNsPredicateString("name ==
-//		// 'LibraryTab'")).click();
-//		List<WebElement> allPhotos = driver.findElements(AppiumBy.iOSClassChain("**/XCUIElementTypeImage"));
-//		driver.findElement(By.xpath("//XCUIElementTypeImage[1]")).click();
-//		for (int i = 0; i < allPhotos.size(); i++) {
-//			Map<String, Object> params1 = new HashMap<String, Object>();
-//			params1.put("direction", "left");
-//			driver.executeScript("mobile:swipe", params1);
-//		}
-//	}
+	@Test
+	public void IOSSwipeTest() throws InterruptedException {
+		Map<String, String> params = new HashMap<String, String>();
+		params.put("bundleId", "com.apple.mobileslideshow");
+		params.put("direction", "right");
+		Thread.sleep(2000);
+		driver.executeScript("mobile:swipe", params);
+		driver.executeScript("mobile:launchApp", params);
+		// driver.findElement(AppiumBy.iOSNsPredicateString("name ==
+		// 'LibraryTab'")).click();
+		List<WebElement> allPhotos = driver.findElements(AppiumBy.iOSClassChain("**/XCUIElementTypeImage"));
+		driver.findElement(By.xpath("//XCUIElementTypeImage[1]")).click();
+		for (int i = 0; i < allPhotos.size(); i++) {
+			Map<String, Object> params1 = new HashMap<String, Object>();
+			params1.put("direction", "left");
+			driver.executeScript("mobile:swipe", params1);
+		}
+	}
 
 }
